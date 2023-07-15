@@ -4,7 +4,6 @@
     "pk": 1,
     "fields": {
       "password": "",
-      "last_login": null,
       "is_superuser": true,
       "username": "admin",
       "first_name": "admin",
@@ -12,7 +11,6 @@
       "email": "admin@admin.com",
       "is_staff": true,
       "is_active": true,
-      "date_joined": "",
       "groups": [],
       "user_permissions": []
     }
@@ -22,7 +20,6 @@
     "pk": 2,
     "fields": {
       "password": "",
-      "last_login": null,
       "is_superuser": false,
       "username": "rosie",
       "first_name": "Rosie",
@@ -30,7 +27,6 @@
       "email": "",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "",
       "groups": [],
       "user_permissions": []
     }
@@ -40,7 +36,6 @@
     "pk": 3,
     "fields": {
       "password": "",
-      "last_login": null,
       "is_superuser": false,
       "username": "oliver",
       "first_name": "Oliver",
@@ -48,7 +43,6 @@
       "email": "",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "",
       "groups": [],
       "user_permissions": []
     }
@@ -58,7 +52,6 @@
     "pk": 4,
     "fields": {
       "password": "",
-      "last_login": null,
       "is_superuser": false,
       "username": "asli",
       "first_name": "Asli",
@@ -66,7 +59,6 @@
       "email": "",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "",
       "groups": [],
       "user_permissions": []
     }
@@ -76,7 +68,6 @@
     "pk": 5,
     "fields": {
       "password": "",
-      "last_login": null,
       "is_superuser": false,
       "username": "kate",
       "first_name": "Kate",
@@ -84,7 +75,6 @@
       "email": "",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "",
       "groups": [],
       "user_permissions": []
     }
@@ -94,7 +84,6 @@
     "pk": 6,
     "fields": {
       "password": "",
-      "last_login": null,
       "is_superuser": false,
       "username": "andrew",
       "first_name": "Andrew",
@@ -102,7 +91,6 @@
       "email": "",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "",
       "groups": [],
       "user_permissions": []
     }
@@ -112,7 +100,6 @@
     "pk": 7,
     "fields": {
       "password": "",
-      "last_login": null,
       "is_superuser": false,
       "username": "carlie",
       "first_name": "Carlie",
@@ -120,7 +107,6 @@
       "email": "",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "",
       "groups": [],
       "user_permissions": []
     }
