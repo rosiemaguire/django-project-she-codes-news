@@ -1,0 +1,128 @@
+[
+  {
+    "model": "users.customuser",
+    "pk": 1,
+    "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "admin",
+      "last_name": "",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 2,
+    "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "rosie",
+      "first_name": "Rosie",
+      "last_name": "Maguire",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 3,
+    "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "oliver",
+      "first_name": "Oliver",
+      "last_name": "Lavers",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 4,
+    "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "asli",
+      "first_name": "Asli",
+      "last_name": "Yoruk",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 5,
+    "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kate",
+      "first_name": "Kate",
+      "last_name": "Kirwin",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 6,
+    "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "andrew",
+      "first_name": "Andrew",
+      "last_name": "Bloyce",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 7,
+    "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "carlie",
+      "first_name": "Carlie",
+      "last_name": "Hamilton",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
