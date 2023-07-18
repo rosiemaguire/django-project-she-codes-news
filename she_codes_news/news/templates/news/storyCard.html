@@ -3,7 +3,7 @@
         {% if story.id < 6 %}
             <img src="../static/news/images/placeholder-{{ story.id }}.jpg">
         {% else %}
-            <img src="https://picsum.photos/600">
+            <img src={{ story.image }}>
         {% endif %}
         <div class="story-card-text">
             <h3>{{ story.title }}</h3>

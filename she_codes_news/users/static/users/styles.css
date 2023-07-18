@@ -1,3 +1,8 @@
+#user-details {
+  flex-basis: 80%;
+  display: flex;
+}
+
 .button {
   border: black solid 1px;
   margin: 2px;

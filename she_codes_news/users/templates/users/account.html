@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/styles.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="user-details" >
+    <h2>My Account</h2>
+    Username:
+    {{ user.username }}
+    <br><br>
+    First Name:
+    {{ user.first_name }}
+    <br><br>
+    Last Name: {{ user.last_name }}
+    <br><br>
+    Email {{ user.email }}
+    <br><br>
+    Last Login: {{ user.last_login}}
+</div>
+<div>
+  <h2>My articles</h2>
+</div>
+<footer>
+  <a href="{% url 'password_change' %}">Change Password</a>
+</footer>
+{% endblock %}
