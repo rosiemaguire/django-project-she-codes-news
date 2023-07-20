@@ -7,5 +7,8 @@ class CustomUser(AbstractUser):
         """
         Return the first_name plus the last_name, with a space in between.
         """
-        full_name = AbstractUser.get_full_name(self)
-        return full_name
+        if AbstractUser.get_full_name(self) != '':
+            name = AbstractUser.get_full_name(self)
+        else:
+            name = self.username
+        return name
