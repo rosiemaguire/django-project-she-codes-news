@@ -1,14 +1,20 @@
-<!-- users/templates/registration/login.html -->
-{% extends 'base.html' %} {% load static %} {% block stylesheets %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="{% static 'users/styles.css' %}" />
-{% endblock %} {% block content %}
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %} {{ form.as_p }}<button type="submit">Login</button>
-  <br />
+{% endblock %} 
 
-</form>
-<a class="button" href="{% url 'password_reset' %}"
->Forgot password? Click here to reset</a
->
+{% block content %}
+<section id="user-login">
+  <h2>Login</h2>
+  <form class="login" method="post">
+    {% csrf_token %} 
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  <div class="password-reset">
+    <a href="{% url 'password_reset' %}">Forgot password? Click here to reset</a>
+  </div>
+</section>
+
 {% endblock %}

@@ -1,28 +1,35 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} 
+{% load static %} 
+
 {% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="{% static 'users/styles.css' %}" />
-{% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'users/styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static '/news/styles.css' %}" />
+{% endblock %} 
 
 {% block content %}
-<div id="user-details" >
-    <h2>My Account</h2>
-    Username:
-    {{ user.username }}
-    <br><br>
-    First Name:
-    {{ user.first_name }}
-    <br><br>
-    Last Name: {{ user.last_name }}
-    <br><br>
-    Email {{ user.email }}
-    <br><br>
-    Last Login: {{ user.last_login}}
+<section id="user-details">
+  <h2>My Account</h2>
+  <p>Username: {{ user.username }}</p>
+  <p>First Name: {{ user.first_name }}</p>
+  <p>Last Name: {{ user.last_name }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Last Login: {{ user.last_login}}</p>
+<div id="stories-by-author">
+    <h2>My articles</h2>
+<article id="my-articles">
+
+    {% if stories_by_author %} 
+        {% for story in stories_by_author %} 
+            {% include "./../news/storyCard.html" with story=story %}
+        {% endfor %} 
+    {% else %}
+    <p>You have not written any stories.</p>
+    {% endif %}
+</article>
 </div>
-<div>
-  <h2>My articles</h2>
-</div>
+</section>
 <footer>
   <a href="{% url 'password_change' %}">Change Password</a>
+  <a href="#">Update my details</a>
 </footer>
 {% endblock %}

@@ -1,9 +1,41 @@
-#user-details {
-  flex-basis: 80%;
-  display: flex;
+#user-login .login {
+  margin-bottom: 40px;
 }
 
-.button {
-  border: black solid 1px;
-  margin: 2px;
+.password-reset {
+  display:flex;
+  flex-direction: row;;
+  transition: all 0.6 ease;
+}
+.password-reset a:hover{
+  transform: scale(1.1);
+  margin: 8px;
+}
+
+#user-details {
+  min-height: 90%;
+  height: auto !important;
+  margin-bottom: -50px;
+}
+
+#user-details:after {
+  content: "";
+  display: block;
+  height: 50px;
+}
+
+#stories-by-author {
+  margin-top: 32px;
+  height: 100%;
+
+}
+#my-articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#my-articles .story-card {
+  flex-basis: 32%;
+  flex-grow: 1;
 }

@@ -4,7 +4,7 @@ from django.views.generic.edit import CreateView
 from django.views import generic
 from .models import CustomUser
 from .forms import CustomUserCreationForm
-
+from news.models import NewsStory
 
 class CreateAccountView(CreateView):
     form_class = CustomUserCreationForm
@@ -17,6 +17,11 @@ class AccountView(generic.DetailView):
     template_name = 'users/account.html'
 
     def get_queryset(self):
-        '''Return all news stories.'''
+        '''Return all user attributes.'''
         return CustomUser.objects.all()
     
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['stories_by_author'] = NewsStory.objects.filter(author_id = self.request.user.id).order_by("-pub_date")
+        return context
+
