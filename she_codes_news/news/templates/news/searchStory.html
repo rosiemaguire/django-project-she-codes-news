@@ -1,0 +1,30 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}" />
+{% endblock %} 
+
+{% block content %}
+{% csrf_token %}
+    {% if query %}
+    <div>
+        <div>
+        {% for post in posts %} 
+            {{post.title}} 
+        {% endfor %} 
+    {% else %}
+        <h3>No search results found</h3>
+    {% endif %}
+        </div>
+    </div>
+
+        {% if latest_stories %} 
+            {% for story in posts %} 
+                {% include "./storyCard.html" with story=story %} 
+            {% endfor %} 
+        {% else %}
+            <p>No stories are available.</p>
+        {% endif %} 
+
+{% endblock %}
