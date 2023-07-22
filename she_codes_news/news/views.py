@@ -1,13 +1,12 @@
 from django.shortcuts import render
 from django.views import generic
 from django.urls import reverse_lazy
-from .models import NewsStory
-from .forms import StoryForm
 from django.db.models import Q
 from users.models import CustomUser
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-import datetime
+from .models import NewsStory
+from .forms import StoryForm
 
 
 class IndexView(generic.ListView):
@@ -37,7 +36,6 @@ class AddStoryView(generic.CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        form.instance.pub_date = datetime.datetime.now()
         return super().form_valid(form)
 
 class SearchFeature(generic.ListView):
