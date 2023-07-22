@@ -5,12 +5,15 @@ from django.views import generic
 from .models import CustomUser
 from .forms import CustomUserCreationForm
 from news.models import NewsStory
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 class CreateAccountView(CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy("login")
     template_name = "users/createAccount.html"
 
+@method_decorator(login_required, name='dispatch')
 class AccountView(generic.DetailView):
     form_class = CustomUser
     context_object_name = 'user'
