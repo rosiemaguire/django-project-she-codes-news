@@ -5,6 +5,8 @@ from .models import NewsStory
 from .forms import StoryForm
 from django.db.models import Q
 from users.models import CustomUser
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 import datetime
 
 
@@ -26,6 +28,7 @@ class StoryView(generic.DetailView):
     template_name = 'news/story.html'
     context_object_name = 'story'
 
+@method_decorator(login_required, name='dispatch')
 class AddStoryView(generic.CreateView):
     form_class = StoryForm
     context_object_name = 'storyform'
