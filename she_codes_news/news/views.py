@@ -5,6 +5,7 @@ from .models import NewsStory
 from .forms import StoryForm
 from django.db.models import Q
 from users.models import CustomUser
+import datetime
 
 
 class IndexView(generic.ListView):
@@ -33,6 +34,7 @@ class AddStoryView(generic.CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        form.instance.pub_date = datetime.datetime.now()
         return super().form_valid(form)
 
 class SearchFeature(generic.ListView):
