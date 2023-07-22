@@ -2,29 +2,27 @@
 {% load static %} 
 
 {% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}" />
 {% endblock %} 
 
 {% block content %}
-{% csrf_token %}
-    {% if query %}
-    <div>
-        <div>
-        {% for post in posts %} 
-            {{post.title}} 
-        {% endfor %} 
-    {% else %}
-        <h3>No search results found</h3>
-    {% endif %}
-        </div>
-    </div>
-
-        {% if latest_stories %} 
-            {% for story in posts %} 
-                {% include "./storyCard.html" with story=story %} 
-            {% endfor %} 
-        {% else %}
-            <p>No stories are available.</p>
-        {% endif %} 
-
+<form method="post" action="{% url 'news:searchView' %}">
+  {% csrf_token %}
+  <input
+    type="search"
+    placeholder="Search"
+    name="article_search"
+    aria-label="Search" />
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<div>
+  {% csrf_token %} 
+  {% if query %} 
+    {% for story in search_results %} 
+        {% include "./storyCard.html" with story=story %} 
+    {% endfor %} 
+  {% else %}
+    <h3>No search results found</h3>
+  {% endif %}
+</div>
 {% endblock %}
