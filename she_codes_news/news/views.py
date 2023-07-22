@@ -43,10 +43,16 @@ class SearchFeature(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['latest_stories'] = NewsStory.objects.all().order_by("-pub_date")[:4]
+        context['author'] = CustomUser.objects.all()
         return context
 
     def post(self,request):
         search_query = request.POST['article_search']
-        search_results = NewsStory.objects.filter(Q(title__icontains=search_query) | Q(content__icontains=search_query))
+        search_results =  NewsStory.objects.filter(Q(title__icontains=search_query) | Q(content__icontains=search_query))
+        for user in CustomUser.objects.all():
+            if search_query in str(user).lower():
+                search_results |= NewsStory.objects.filter(author=user.id)
+            else:
+                pass
         return render(request, 'news/searchStory.html', {'query': search_query,'search_results':search_results})
 
