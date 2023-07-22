@@ -52,7 +52,7 @@ class SearchFeature(generic.ListView):
         search_query = request.POST['article_search']
         search_results =  NewsStory.objects.filter(Q(title__icontains=search_query) | Q(content__icontains=search_query))
         for user in CustomUser.objects.all():
-            if search_query in str(user).lower():
+            if search_query.lower() in str(user).lower():
                 search_results |= NewsStory.objects.filter(author=user.id)
             else:
                 pass
