@@ -42,7 +42,7 @@ This project uses HTML, CSS and the Django framework. It is a news website that 
     - Deactivate the virtual environment by either using the command `deactivate` or terminate your terminal session.
 
 ## Database Schema
-![My ERD]( she_codes_news\images\ERD.png )
+![My ERD]( she_codes_news/images/ERD.png )
 ## Project Features
 - [X] Order stories by date
     ![Latest stories ordered by publication date](she_codes_news/images/127.0.0.1_8000_news_1.png)
