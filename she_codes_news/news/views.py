@@ -47,7 +47,7 @@ class SearchFeature(generic.ListView):
         search_results =  NewsStory.objects.filter(Q(title__icontains=search_query) | Q(content__icontains=search_query))
         for user in CustomUser.objects.all():
             if search_query.lower() in str(user).lower():
-                search_results |= NewsStory.objects.filter(author=user.id)
+                search_results |= NewsStory.objects.filter(author__username__icontains=user.username)
             else:
                 pass
         return render(request, 'news/searchStory.html', {'query': search_query,'search_results':search_results})
