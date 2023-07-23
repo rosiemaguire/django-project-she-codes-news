@@ -71,6 +71,6 @@ This project uses HTML, CSS and the Django framework. It is a news website that 
 - [ ] Add the ability to “favourite” stories and see a page with your favourite stories.
 
 - [X] Our form for creating stories requires you to add the publication date, update this to automatically save the publication date as the day the story was first published (maybe you could then add a field to showwhen the story was updated).
-    ![Add Story Form](she_codes_news\images\127.0.0.1_8000_news_add-story_.png)
+    ![Add Story Form](she_codes_news/images/127.0.0.1_8000_news_add-story_.png)
 - [ ] Gracefully handle the error where someone tries to create a new story whenthey are not logged in.
 
