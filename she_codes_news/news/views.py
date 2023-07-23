@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.urls import reverse_lazy
 from django.db.models import Q
@@ -6,8 +6,7 @@ from users.models import CustomUser
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import NewsStory
-from .forms import StoryForm
-
+from .forms import StoryForm, CommentForm
 
 class IndexView(generic.ListView):
     template_name = 'news/index.html'
@@ -42,12 +41,6 @@ class SearchFeature(generic.ListView):
     model = NewsStory
     template_name = 'news/searchStory.html'
     context_object_name = 'searchView'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['latest_stories'] = NewsStory.objects.all().order_by("-pub_date")[:4]
-        context['author'] = CustomUser.objects.all()
-        return context
 
     def post(self,request):
         search_query = request.POST['article_search']
