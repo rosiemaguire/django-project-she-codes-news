@@ -66,11 +66,11 @@ This project uses HTML, CSS and the Django framework. It is a news website that 
 ## Additional Features:
 - [ ] Add categories to the stories and allow the user to search for stories by category.
 
-- [ ] Add the ability to update and delete stories (consider permissions - whoshould be allowed to update or and/or delete stories).
+- [ ] Add the ability to update and delete stories (consider permissions - whos hould be allowed to update or and/or delete stories).
 
 - [ ] Add the ability to “favourite” stories and see a page with your favourite stories.
 
-- [X] Our form for creating stories requires you to add the publication date, update this to automatically save the publication date as the day the story was first published (maybe you could then add a field to show when the story was updated).
+- [X] Our form for creating stories requires you to add the publication date, update this to automatically save the publication date as the day the story was first published.
     ![Add Story Form](she_codes_news/images/127.0.0.1_8000_news_add-story_.png)
-- [ ] Gracefully handle the error where someone tries to create a new story whenthey are not logged in.
+- [ ] Gracefully handle the error where someone tries to create a new story when they are not logged in.
 
